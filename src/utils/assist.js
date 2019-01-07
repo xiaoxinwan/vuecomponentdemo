@@ -17,8 +17,8 @@ function findComponentUpward(context, componentName) {
     if (parent) {
       name = parent.$options.name;
     }
-    return parent;
   }
+  return parent;
 }
 export { findComponentUpward };
 
@@ -74,9 +74,10 @@ export { findComponentDownward };
 function findComponentsDownward(context, componentName) {
   return context.$children.reduce((components, child) => {
     if (child.$options.name === componentName) {
-      const foundSons = findComponentsDownward(child, componentName);
-      return components.concat(foundSons);
+      components.push(child);
     }
+    const foundSons = findComponentsDownward(child, componentName);
+    return components.concat(foundSons);
   }, []);
 }
 export { findComponentsDownward };
