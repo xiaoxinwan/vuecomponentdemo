@@ -8,6 +8,9 @@
         <li>
           <router-link to="/checkbox">组合多选框组件——CheckboxGroup & checkBox</router-link>
         </li>
+        <li>
+          <router-link to="/display">动态渲染.vue的组件——Display</router-link>
+        </li>
       </ul>
 
     </div>
