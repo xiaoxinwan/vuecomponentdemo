@@ -11,6 +11,9 @@
         <li>
           <router-link to="/display">动态渲染.vue的组件——Display</router-link>
         </li>
+        <li>
+          <router-link to="/alert">alert</router-link>
+        </li>
       </ul>
 
     </div>
